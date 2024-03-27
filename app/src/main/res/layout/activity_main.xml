@@ -20,42 +20,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/input1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Cost o Service"
+        android:layout_marginTop="20sp"
+        android:layout_marginStart="10sp"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <TextView
         android:id="@+id/subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="How was the servide?"
-        android:layout_marginTop="20sp"
         android:layout_marginStart="10sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv1"/>
+        app:layout_constraintTop_toBottomOf="@id/input1"/>
 
-    <RadioButton
-        android:id="@+id/radio1"
+    <RadioGroup
+        android:id="@+id/service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Amazing(20%)"
-        android:layout_marginStart="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtitle"/>
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/subtitle">
 
-    <RadioButton
-        android:id="@+id/radio2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Good(18%)"
-        android:layout_marginStart="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radio1"/>
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amazing(20%)"
+            android:layout_marginStart="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle"/>
 
-    <RadioButton
-        android:id="@+id/radio3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ok(15%)"
-        android:layout_marginStart="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radio2"/>
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good(18%)"
+            android:layout_marginStart="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio1"/>
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok(15%)"
+            android:layout_marginStart="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio2"/>
+
+
+    </RadioGroup>
+
 
     <Switch
         android:id="@+id/tv2"
@@ -63,7 +83,7 @@
         android:layout_height="wrap_content"
         android:text="Round up tip?"
         android:layout_marginStart="10sp"
-        app:layout_constraintTop_toBottomOf="@id/radio3"
+        app:layout_constraintTop_toBottomOf="@id/service"
         app:layout_constraintStart_toStartOf="parent"/>
     
     <Button
@@ -86,8 +106,6 @@
         android:layout_marginHorizontal="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"/>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
