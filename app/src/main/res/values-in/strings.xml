@@ -2,4 +2,11 @@
 <resources>
     <string name="app_name">Challenge</string>
     <string name="calculate">HITUNG</string>
+    <string name="edit_text">Biaya layanan</string>
+    <string name="service">Bagaimana pelayanannya?</string>
+    <string name="amazing">Luar Biasa(20%)</string>
+    <string name="good">Bagus(18%)</string>
+    <string name="ok">Oke(15%)</string>
+    <string name="round">Bulatkan tip?</string>
+    <string name="amount">Jumlah tip</string>
 </resources>
